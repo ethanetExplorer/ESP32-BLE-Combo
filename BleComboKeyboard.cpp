@@ -198,11 +198,11 @@ void BleComboKeyboard::taskServer(void* pvParameter) {
   vTaskDelay(portMAX_DELAY); //delay(portMAX_DELAY);
 }
 
-void BleComboKeyboard::sendReport(KeyReport* keys)
+void BleComboKeyboard::sendReport(BleKeyReport* keys)
 {
   if (this->isConnected())
   {
-    this->inputKeyboard->setValue((uint8_t*)keys, sizeof(KeyReport));
+    this->inputKeyboard->setValue((uint8_t*)keys, sizeof(BleKeyReport));
     this->inputKeyboard->notify();
   }
 }

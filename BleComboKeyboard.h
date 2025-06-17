@@ -84,7 +84,7 @@ typedef struct
   uint8_t modifiers;
   uint8_t reserved;
   uint8_t keys[6];
-} KeyReport;
+} BleKeyReport;
 
 class BleComboKeyboard : public Print
 {
@@ -95,7 +95,7 @@ private:
   BLECharacteristic* outputKeyboard;
   BLECharacteristic* inputMediaKeys;
   
-  KeyReport _keyReport;
+  BleKeyReport _keyReport;
   MediaKeyReport _mediaKeyReport;
   static void taskServer(void* pvParameter);
 
@@ -103,7 +103,7 @@ public:
   BleComboKeyboard(std::string deviceName = "ESP32 Keyboard/Mouse", std::string deviceManufacturer = "Espressif", uint8_t batteryLevel = 100);
   void begin(void);
   void end(void);
-  void sendReport(KeyReport* keys);
+  void sendReport(BleKeyReport* keys);
   void sendReport(MediaKeyReport* keys);
   size_t press(uint8_t k);
   size_t press(const MediaKeyReport k);
