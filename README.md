@@ -1,6 +1,13 @@
 # ESP32 BLE Combo Keyboard & Mouse library
 
-This library allows you to make the ESP32 act as a Bluetooth keyboard and mouse with Arduino.
+This library allows you to make the ESP32 act as a Bluetooth keyboard and mouse with Arduino. It has been fixed to change any mentions of `std::string` to `String` to ensure better compatibility with more modern versions of the compiler. 
+
+##  How to add this library to the Arduino IDE
+- (Make sure you can use the ESP32 with the Arduino IDE. [Instructions can be found here.](https://github.com/espressif/arduino-esp32#installation-instructions))
+- [Download the latest release of this library from the release page.](https://github.com/T-vK/ESP32-BLE-Keyboard/releases)
+- In the Arduino IDE go to "Sketch" -> "Include Library" -> "Add .ZIP Library..." and select the file you just downloaded.
+- You can now go to "File" -> "Examples" -> "ESP32 BLE Combo" and select any of the examples to get started.
+ - Be cafeful with things like Ctrl Alt Del in the example code.
 
 ## Todo
 
@@ -9,11 +16,6 @@ This library allows you to make the ESP32 act as a Bluetooth keyboard and mouse 
  - [x] Auto-instantiate Keyboard, Mouse objects (like the standard Arduino libraries)
  - [ ] Optimize so that only needed classes get created for BLE.
 
-## Installation
-- (Make sure you can use the ESP32 with the Arduino IDE. [Instructions can be found here.](https://github.com/espressif/arduino-esp32#installation-instructions))
-- [Download the latest release of this library from the release page.](https://github.com/T-vK/ESP32-BLE-Keyboard/releases)
-- In the Arduino IDE go to "Sketch" -> "Include Library" -> "Add .ZIP Library..." and select the file you just downloaded.
-- You can now go to "File" -> "Examples" -> "ESP32 BLE Combo" and select any of the examples to get started.
 
 ## Example
 
@@ -62,8 +64,12 @@ void loop() {
 ```
 ## Credits
 
+This is a fork of @
+
 This is fork of @T-kV's excellent [ESP32-BLE-Mouse](https://github.com/T-vK/ESP32-BLE-Mouse)
 and [ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-Keyboard) libraries.
+
+In other words, this is a fork of a fork. Enjoy your day.
 
 You might also be interested in:
 
