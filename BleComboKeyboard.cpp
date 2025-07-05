@@ -131,7 +131,7 @@ static const uint8_t _hidReportDescriptor[] = {
   END_COLLECTION(0)          // END_COLLECTION
 };
 
-BleComboKeyboard::BleComboKeyboard(std::string deviceName, std::string deviceManufacturer, uint8_t batteryLevel) : hid(0)
+BleComboKeyboard::BleComboKeyboard(String deviceName, String deviceManufacturer, uint8_t batteryLevel) : hid(0)
 {
   this->deviceName = deviceName;
   this->deviceManufacturer = deviceManufacturer;
