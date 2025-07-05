@@ -100,7 +100,7 @@ private:
   static void taskServer(void* pvParameter);
 
 public:
-  BleComboKeyboard(std::string deviceName = "ESP32 Keyboard/Mouse", std::string deviceManufacturer = "Espressif", uint8_t batteryLevel = 100);
+  BleComboKeyboard(String deviceName = "FP Device", String deviceManufacturer = "eig", uint8_t batteryLevel = 100);
   void begin(void);
   void end(void);
   void sendReport(BleKeyReport* keys);
@@ -117,8 +117,8 @@ public:
   bool isConnected(void);
   void setBatteryLevel(uint8_t level);
   uint8_t batteryLevel;
-  std::string deviceManufacturer;
-  std::string deviceName;
+  String deviceManufacturer;
+  String deviceName;
 
   BLECharacteristic* inputMouse;
 
