@@ -101,6 +101,8 @@ private:
 
 public:
   BleComboKeyboard(String deviceName = "FP Device", String deviceManufacturer = "eig", uint8_t batteryLevel = 100);
+  void setDeviceName      (const String& name)         { deviceName      = name; }
+  void setDeviceManufacturer(const String& manufacturer){ deviceManufacturer = manufacturer; }
   void begin(void);
   void end(void);
   void sendReport(BleKeyReport* keys);
